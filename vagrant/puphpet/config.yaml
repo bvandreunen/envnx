@@ -94,10 +94,10 @@ nginx:
     upstreams: {  }
     vhosts:
         nxv_ler90lkd90jk:
-            server_name: loc.knjv.nl
+            server_name: loc.superinteractive.com
             server_aliases:
-                - loc.knjv.nl
-            www_root: /var/www/loc.knjv.nl/app/www
+                - loc.superinteractive.com
+            www_root: /var/www/loc.superinteractive.com/app/www
             listen_port: '80'
             index_files:
                 - index.html
