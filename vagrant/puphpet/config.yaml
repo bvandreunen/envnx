@@ -152,10 +152,10 @@ apache:
         - deflate
     vhosts:
         av_y039jvteftvz:
-            servername: awesome.dev
+            servername: loc.superinteractive.com
             serveraliases:
-                - www.awesome.dev
-            docroot: /var/www/awesome
+                - www.loc.superinteractive.com
+            docroot: /var/www/loc.superinteractive.com
             port: '80'
             setenv:
                 - 'APP_ENV dev'
@@ -169,7 +169,7 @@ apache:
             ssl_cipher: ''
             directories:
                 avd_kxjlwqjd6v1c:
-                    path: /var/www/awesome
+                    path: /var/www/loc.superinteractive.com
                     options:
                         - Indexes
                         - FollowSymlinks
