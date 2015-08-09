@@ -3,12 +3,12 @@ vagrantfile:
     vm:
         box: puphpet/ubuntu1404-x64
         box_url: puphpet/ubuntu1404-x64
-        hostname: local.dev
+        hostname: envnx.loc
         memory: '1024'
         cpus: '1'
         chosen_provider: virtualbox
         network:
-            private_network: 192.168.56.101
+            private_network: 192.168.56.102
             forwarded_port:
                 vflnp_rgf860w2ndac:
                     host: '7913'
