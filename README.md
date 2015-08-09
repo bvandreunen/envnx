@@ -1,2 +1,2 @@
 # env
-Fairly simple but complete LAMP development environment
+Fairly simple but complete LEMP development environment
