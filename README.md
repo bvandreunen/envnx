@@ -1,7 +1,7 @@
 # envnx
 ##### A fairly simple but complete LEMP development environment.
 
-envnx is a complete development environment for devs who work on multiple projects at the same time. Like, you know, people working at agencies.
+envnx is a complete development environment for devs who work on multiple projects at the same time. Like, you know, people working at [agencies](http://www.superinteractive.com).
 
 It is based on [PuPHPet](https://puphpet.com), with a few adjustments.
 
@@ -71,7 +71,6 @@ A small tool has been added to easily manage virtualhosts. This script, original
 
 ```
 $ vhost create [domain] [optional host_dir]
-
 ```
 
 *Delete a vhost:*
