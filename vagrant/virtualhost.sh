@@ -115,13 +115,13 @@ if [ "$action" == 'create' ]
 		fi
 
 		### Add domain in /etc/hosts
-		if ! echo "127.0.0.1	$domain" >> /etc/hosts
-			then
-				echo $"ERROR: Not able write in /etc/hosts"
-				exit;
-		else
-				echo -e $"Host added to /etc/hosts file \n"
-		fi
+		# if ! echo "127.0.0.1	$domain" >> /etc/hosts
+		# 	then
+		# 		echo $"ERROR: Not able write in /etc/hosts"
+		# 		exit;
+		# else
+		# 		echo -e $"Host added to /etc/hosts file \n"
+		# fi
 
 		if [ "$owner" == "" ]; then
 			chown -R $(whoami):www-data $userDir$rootDir
