@@ -30,23 +30,24 @@ envnx is configured to run on `192.168.56.102`
 * postfix
 * curl
 * git
+* virtualhost-nginx.sh for [managing vhosts](#managing-vhosts)
 
 ## How to use
-If you're not familiar with Vagrant, [please check their documentation](http://docs.vagrantup.com/v2/getting-started/).
 
-Assuming you are familiar with Vagrant, and have VirtualBox running:
+Assuming you are familiar with [Vagrant](http://docs.vagrantup.com/v2/getting-started/), and have [VirtualBox](https://www.virtualbox.org/wiki/Downloads) running:
 
 1. Download this project to folder where you want envnx to live on your machine
 2. Open your terminal and move into the folder
 3. Within this folder, create a `www` folder. This will hold your projects.
-  > envnx will automatically sync this folder as the `/var/www/` within the box. You can also create `www` as a symlink to an existing folder on your host machine. I like to use the `~/Sites` folder in OS X.
+  > envnx will automatically sync this folder as the `/var/www/` within the box. You can also create `www` as a symlink to an existing folder on your host machine. I like to use `~/Sites` in OS X.
 
 4. Install the vagrant-bindfs plugin:
 
     ```
   $ vagrant plugin install vagrant-bindfs
     ```
-  > Vagrant can use multiple techniques to sync files between your host machine and the box. NFS is fastest, but it needs this plugin.
+
+  > Vagrant can use multiple techniques to sync files between your host machine and the box. NFS is the fastest, but it needs this plugin.
 
 5. Move into the `vagrant` folder and start it up:
 
@@ -54,7 +55,7 @@ Assuming you are familiar with Vagrant, and have VirtualBox running:
   $ vagrant up
     ```
 
-   The first time this will take a while. So go grab a coffee, or call your mom.
+   The first time this will take quite a while. So go grab a coffee, or call your mom.
 
 6. That's it, the box should now be running on `192.168.56.102`. Time to add some vhosts.
 
@@ -112,6 +113,8 @@ Example:
 ```
 
 ## Connecting to MySQL
+
+You should use [Sequel Pro](http://www.sequelpro.com), it's great.
 
 * MySQL Host: 127.0.0.1
 * Username: root
