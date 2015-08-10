@@ -7,13 +7,6 @@ It is based on [PuPHPet](https://puphpet.com), with a few adjustments.
 
 envnx is configured to run on `192.168.56.102`
 
-> **NOTE**
-
->Resources for this box are set to an optimized amount (for me at least) of 4GB of RAM and 4 CPU's. This may very well be too much for your machine so please double check.
-
-> Edit /vagrant/puphpet/config.yaml to change this (before upping the box).
-
-
 ## Box includes:
 * puphpet/ubuntu1404-x64
 * nginx
@@ -32,27 +25,43 @@ envnx is configured to run on `192.168.56.102`
 * git
 * virtualhost-nginx.sh for [managing vhosts](#managing-vhosts)
 
+> **NOTE**
+
+>Resources for this box are set to an optimized amount (for me at least) of 4GB of RAM and 4 CPU's. This may very well be too much for your machine so please double check.
+
+> Edit /vagrant/puphpet/config.yaml to change this (before upping the box).
+
 ## How to use
 
 Assuming you are familiar with [Vagrant](http://docs.vagrantup.com/v2/getting-started/), and have [VirtualBox](https://www.virtualbox.org/wiki/Downloads) running:
 
-1. Download this project to folder where you want envnx to live on your machine
-2. Open your terminal and move into the folder
-3. Within this folder, create a `www` folder. This will hold your projects.
-  > envnx will automatically sync this folder as the `/var/www/` within the box. You can also create `www` as a symlink to an existing folder on your host machine. I like to use `~/Sites` in OS X.
+1. Open your terminal and move into the folder where you want envnx to live on your machine. 
+2. Download this project into the folder 
+	
+	```
+	curl -o master https://codeload.github.com/bvandreunen/envnx/zip/master && unzip -q master -d envnx && rm -f master
+	```
+
+3. Within this folder, create a `www` folder. This will hold your websites/projects.
+  
+  	> Envnx will automatically sync this folder with the `/var/www/` folder within the box. You can also create `www` as a symlink to an existing folder on your host machine. I like to use `~/Sites` in OS X:
+  	
+  	> ```
+  	ln -s ~/Sites ~/envnx/www
+  	```
 
 4. Install the vagrant-bindfs plugin:
 
     ```
-  $ vagrant plugin install vagrant-bindfs
+  vagrant plugin install vagrant-bindfs
     ```
 
-  > Vagrant can use multiple techniques to sync files between your host machine and the box. NFS is the fastest, but it needs this plugin.
+  	> Vagrant can use multiple techniques to sync files between your host machine and the box. NFS is the fastest, but it needs this plugin.
 
 5. Move into the `vagrant` folder and start it up:
 
     ```
-  $ vagrant up
+  vagrant up
     ```
 
    The first time this will take quite a while. So go grab a coffee, or call your mom.
@@ -70,13 +79,13 @@ A small tool has been added to easily manage virtualhosts. This script, original
 *Add a vhost:*
 
 ```
-$ vhost create [domain] [optional host_dir]
+vhost create [domain] [optional host_dir]
 ```
 
 *Delete a vhost:*
 
 ```
-$ vhost delete [domain] [optional host_dir]
+vhost delete [domain] [optional host_dir]
 ```
 
 Omitting the `host_dir` argument will use `domain` as the name of the webroot folder: `/var/www/<domain>`.
@@ -88,13 +97,13 @@ Note that the script will check if the given directory exist and won't overwrite
 *Add a vhost loc.superinteractive.com:*
 
 ```
-$ vhost create loc.superinteractive.com
+vhost create loc.superinteractive.com
 ```
 
 *Delete vhost loc.superinteractive.com:*
 
 ```
-$ vhost delete loc.superinteractive.com
+vhost delete loc.superinteractive.com
 ```
 
 You could use anything as domain, but a clear and address-bar-autocomplete-friendly practice is to prepend your domain with "loc.", like `loc.superinteractive.com`.
