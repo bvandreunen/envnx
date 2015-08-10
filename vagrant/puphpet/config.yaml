@@ -34,7 +34,7 @@ vagrantfile:
                     - '--parser future'
         synced_folder:
             vflsf_16wc10g0joju:
-                source: ./../Sites/
+                source: ./../www/
                 target: /var/www
                 sync_type: default
                 smb:
