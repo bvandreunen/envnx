@@ -86,7 +86,7 @@ cron:
     install: '1'
     jobs: {  }
 nginx:
-    install: '0'
+    install: '1'
     settings:
         default_vhost: 1
         proxy_buffer_size: 128k
@@ -138,7 +138,7 @@ nginx:
                         - 'APP_ENV dev'
     proxies: {  }
 apache:
-    install: '1'
+    install: '0'
     settings:
         user: www-data
         group: www-data

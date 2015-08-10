@@ -5,7 +5,7 @@ TEXTDOMAIN=virtualhost
 ### Set default parameters
 action=$1
 domain=$2
-rootDir=$3
+rootDir=$2
 owner=$(who am i | awk '{print $1}')
 sitesEnable='/etc/nginx/sites-enabled/'
 sitesAvailable='/etc/nginx/sites-available/'
@@ -29,7 +29,7 @@ do
 done
 
 if [ "$rootDir" == "" ]; then
-	rootDir=${domain//./}
+	rootDir=${domain}
 fi
 
 ### if root dir starts with '/', don't use /var/www as default starting point
@@ -37,7 +37,7 @@ if [[ "$rootDir" =~ ^/ ]]; then
 	userDir=''
 fi
 
-rootDir=$userDir$rootDir
+#rootDir=$userDir$rootDir
 
 if [ "$action" == 'create' ]
 	then
