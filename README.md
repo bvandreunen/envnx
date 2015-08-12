@@ -44,15 +44,16 @@ Assuming you are familiar with [Vagrant](http://docs.vagrantup.com/v2/getting-st
 
 3. Within this folder, create a `www` folder. This will hold your websites/projects.
   
-  	> Envnx will automatically sync this folder with the `/var/www/` folder within the box. You can also create `www` as a symlink to an existing folder on your host machine. I like to use `~/Sites` in OS X:
+  	> Envnx will automatically sync this folder with the `/var/www/` folder within the box. You can also create `www` as a 
+	> symlink to an existing folder on your host machine. I like to use `~/Sites` in OS X:
   	
-  	> ```
-  	ln -s ~/Sites ~/envnx/www
-  	```
+	> ```
+	> ln -s ~/Sites ~/envnx/www
+	> ```
 
 4. Install the vagrant-bindfs plugin:
 
-    ```
+   ```
   vagrant plugin install vagrant-bindfs
     ```
 
@@ -68,8 +69,8 @@ Assuming you are familiar with [Vagrant](http://docs.vagrantup.com/v2/getting-st
 
 6. That's it, the box should now be running on `192.168.56.102`. Time to add some vhosts.
 
-
 ## Managing vhosts
+
 A small tool has been added to easily manage virtualhosts. This script, originally by [RoverWire]("https://github.com/RoverWire/virtualhost/blob/master/virtualhost-nginx.sh", "virtualhost-nginx.sh by RoverWire"), has been slightly adjusted to work well in a Vagrant box.
 
 #### Usage
@@ -96,9 +97,9 @@ Note that the script will check if the given directory exist and won't overwrite
 
 *Add a vhost loc.superinteractive.com:*
 
-```
-vhost create loc.superinteractive.com
-```
+	```
+	vhost create loc.superinteractive.com
+	```
 
 *Delete vhost loc.superinteractive.com:*
 
