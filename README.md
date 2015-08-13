@@ -3,7 +3,8 @@
 
 envnx is the vagrant solution for devs who work on multiple projects at the same time. Like, you know, people working at [agencies](http://www.superinteractive.com).
 
-I created this to have a stable, portable and complete dev environment. It is based on [PuPHPet](https://puphpet.com), with a few adjustments and additions to make life easier. Check below to see an overview of [what's in the box]("whats-in-the-box").
+I created this to have a stable, portable and complete dev environment. It is based on [PuPHPet](https://puphpet.com), with a few adjustments and additions to make life easier.
+Check below to see an overview of [what's in the box](#whats-in-the-box).
 
 envnx is configured to run on `192.168.56.102`
 
