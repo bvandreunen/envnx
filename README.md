@@ -36,45 +36,26 @@ envnx is configured to run on `192.168.56.102`
 Assuming you are familiar with [Vagrant](http://docs.vagrantup.com/v2/getting-started/), and have [VirtualBox](https://www.virtualbox.org/wiki/Downloads) running:
 
 1. Open your terminal and move into the folder where you want envnx to live on your machine.
-2. Download this project into the folder
+2. Run this command to download and install envnx:
 
 	```
-	curl -o master https://codeload.github.com/bvandreunen/envnx/zip/master && unzip -q master -d envnx && rm -f master
+	curl https://raw.githubusercontent.com/bvandreunen/envnx_install/master/install.sh && sh install.sh
 	```
 
-3. Within this folder, create a `www` folder. This will hold your websites/projects.
-
-  	> Envnx will automatically sync this folder with the `/var/www/` folder within the box. You can also create `www` as a symlink to an existing folder on your host machine. I like to use `~/Sites` in OS X:
-
-  	> ```
-  	ln -s ~/Sites ~/envnx/www
-  	```
-
-4. Install the vagrant-bindfs plugin:
-
-    ```
-  vagrant plugin install vagrant-bindfs
-    ```
-
-  	> Vagrant can use multiple techniques to sync files between your host machine and the box. NFS is the fastest, but it needs this plugin.
-
-5. Move into the `vagrant` folder and start it up:
-
-    ```
-  vagrant up
-    ```
-
-   The first time this will take quite a while. So go grab a coffee, or call your mom.
-
-6. That's it, the box should now be running on `192.168.56.102`. Time to add some vhosts.
-
+3. That's it! If you've chosen to start up the box it should now be running on `192.168.56.102`. Time to add some vhosts.
 
 ## Managing vhosts
-A small tool has been added to easily manage virtualhosts. This script, originally by [RoverWire]("https://github.com/RoverWire/virtualhost/"), has been slightly adjusted to work well in a Vagrant box.
+
+A small tool has been added to easily manage virtualhosts. This script, originally by [RoverWire]("https://github.com/RoverWire/virtualhost/blob/master/virtualhost-nginx.sh", "virtualhost-nginx.sh by RoverWire"), has been slightly adjusted to work well in a Vagrant box.
 
 #### Usage
 
-(when in the box)
+Go into the box to use this tool:
+
+```
+cd vagrant
+vagrant ssh
+```
 
 *Add a vhost:*
 
