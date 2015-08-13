@@ -29,23 +29,23 @@ envnx is configured to run on `192.168.56.102`
 
 >Resources for this box are set to an optimized amount (for me at least) of 4GB of RAM and 4 CPU's. This may very well be too much for your machine so please double check.
 
-> Edit /vagrant/puphpet/config.yaml to change this (before upping the box).
+> Edit /vagrant/puphpet/config.yaml to change this.
 
 ## How to use
 
 Assuming you are familiar with [Vagrant](http://docs.vagrantup.com/v2/getting-started/), and have [VirtualBox](https://www.virtualbox.org/wiki/Downloads) running:
 
-1. Open your terminal and move into the folder where you want envnx to live on your machine. 
-2. Download this project into the folder 
-	
+1. Open your terminal and move into the folder where you want envnx to live on your machine.
+2. Download this project into the folder
+
 	```
 	curl -o master https://codeload.github.com/bvandreunen/envnx/zip/master && unzip -q master -d envnx && rm -f master
 	```
 
 3. Within this folder, create a `www` folder. This will hold your websites/projects.
-  
+
   	> Envnx will automatically sync this folder with the `/var/www/` folder within the box. You can also create `www` as a symlink to an existing folder on your host machine. I like to use `~/Sites` in OS X:
-  	
+
   	> ```
   	ln -s ~/Sites ~/envnx/www
   	```
@@ -70,7 +70,7 @@ Assuming you are familiar with [Vagrant](http://docs.vagrantup.com/v2/getting-st
 
 
 ## Managing vhosts
-A small tool has been added to easily manage virtualhosts. This script, originally by [RoverWire]("https://github.com/RoverWire/virtualhost/blob/master/virtualhost-nginx.sh", "virtualhost-nginx.sh by RoverWire"), has been slightly adjusted to work well in a Vagrant box.
+A small tool has been added to easily manage virtualhosts. This script, originally by [RoverWire]("https://github.com/RoverWire/virtualhost/"), has been slightly adjusted to work well in a Vagrant box.
 
 #### Usage
 
@@ -131,7 +131,7 @@ You should use [Sequel Pro](http://www.sequelpro.com), it's great.
 * SSH User: vagrant
 * SSH Key: ./vagrant/puphpet/files/dot/ssh/id_rsa
 
-Sometimes Sequel Pro will keep asking for a password while connecting, even though you're using the key file. This has to do with a permission issue. To solve it change the key permissions to 400:
+Sometimes Sequel Pro will keep asking for a password while connecting, even though you are using the key file. This has to do with a permission issue. To solve it change the key permissions to 400:
 
 ```
 chmod 400 ./vagrant/puphpet/files/dot/ssh/id_rsa
