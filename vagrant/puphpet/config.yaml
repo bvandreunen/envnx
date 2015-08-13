@@ -36,7 +36,7 @@ vagrantfile:
             vflsf_16wc10g0joju:
                 source: ./../www/
                 target: /var/www
-                sync_type: default
+                sync_type: nfs
                 smb:
                     smb_host: ''
                     smb_username: ''
