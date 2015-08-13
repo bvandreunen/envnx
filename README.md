@@ -1,35 +1,11 @@
 # envnx
 ##### A fairly simple but complete LEMP development environment.
 
-envnx is a complete development environment for devs who work on multiple projects at the same time. Like, you know, people working at [agencies](http://www.superinteractive.com).
+envnx is the vagrant solution for devs who work on multiple projects at the same time. Like, you know, people working at [agencies](http://www.superinteractive.com).
 
-It is based on [PuPHPet](https://puphpet.com), with a few adjustments.
+I created this to have a stable, portable and complete dev environment. It is based on [PuPHPet](https://puphpet.com), with a few adjustments and additions to make life easier. Check below to see an overview of [what's in the box]("whats-in-the-box").
 
 envnx is configured to run on `192.168.56.102`
-
-## Box includes:
-* puphpet/ubuntu1404-x64
-* nginx
-* php-fpm
-* mysql
-* elasticsearch (port 9200)
-* npm
-* mailcatcher (running at http://192.168.56.102:1080)
-* redis (port 6379)
-* wpcli
-* xdebug
-* vim
-* htop
-* postfix
-* curl
-* git
-* virtualhost-nginx.sh for [managing vhosts](#managing-vhosts)
-
-> **NOTE**
-
->Resources for this box are set to an optimized amount (for me at least) of 4GB of RAM and 4 CPU's. This may very well be too much for your machine so please double check.
-
-> Edit /vagrant/puphpet/config.yaml to change this.
 
 ## How to use
 
@@ -100,6 +76,31 @@ Example:
 ```
 192.168.56.102 loc.superinteractive.com
 ```
+
+
+## What's in the box?
+* puphpet/ubuntu1404-x64
+* nginx
+* php5-fpm (php 5.6 + mcrypt, gd, curl, xdebug)
+* mysql
+* elasticsearch (port 9200)
+* npm
+* mailcatcher (running at http://192.168.56.102:1080)
+* redis (port 6379)
+* wp-cli
+* vim
+* htop
+* postfix
+* xdebug
+* git
+* virtualhost-nginx.sh for [managing vhosts](#managing-vhosts)
+
+> **NOTE**
+
+>Resources for this box are set to an optimized amount (for me at least) of 4GB of RAM and 4 CPU's. This may very well be too much for your machine so please double check.
+
+> Edit /vagrant/puphpet/config.yaml to change this.
+
 
 ## Connecting to MySQL
 
