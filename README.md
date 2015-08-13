@@ -23,7 +23,7 @@ Assuming you are familiar with [Vagrant](http://docs.vagrantup.com/v2/getting-st
 
 ## Managing vhosts
 
-A small tool has been added to easily manage virtualhosts. This script, originally by [RoverWire]("https://github.com/RoverWire/virtualhost/blob/master/virtualhost-nginx.sh", "virtualhost-nginx.sh by RoverWire"), has been slightly adjusted to work well in a Vagrant box.
+A small tool has been added to easily manage virtualhosts. This script, originally by [RoverWire](https://github.com/RoverWire/virtualhost/blob/master/virtualhost-nginx.sh), has been slightly adjusted to work well in a Vagrant box.
 
 #### Usage
 
