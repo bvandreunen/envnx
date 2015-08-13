@@ -39,7 +39,7 @@ Assuming you are familiar with [Vagrant](http://docs.vagrantup.com/v2/getting-st
 2. Run this command to download and install envnx:
 
 	```
-	curl https://raw.githubusercontent.com/bvandreunen/envnx_install/master/install.sh && sh install.sh
+	curl -s -o install.sh -L https://raw.githubusercontent.com/bvandreunen/envnx_install/master/install.sh && sh install.sh
 	```
 
 3. That's it! If you've chosen to start up the box it should now be running on `192.168.56.102`. Time to add some vhosts.
