@@ -1,5 +1,5 @@
 # envnx
-##### A fairly simple but complete LEMP development environment.
+##### An easy to install multi-project LEMP development environment using vagrant.
 
 envnx is the vagrant solution for devs who work on multiple projects at the same time. Like, you know, people working at [agencies](http://www.superinteractive.com).
 
